@@ -1,0 +1,811 @@
+.faq-one {
+  padding: 120px 0;
+  position: relative;
+  counter-reset: count;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: 1199px) {
+    .text-end {
+      text-align: left !important;
+    }
+  }
+
+  .sec-title {
+    padding-bottom: 19px;
+  }
+
+  .sec-title__text {
+    font-weight: 400;
+  }
+
+  &__accordion {
+    position: relative;
+
+    .accrodion {
+      position: relative;
+      margin-top: 20px;
+      border-bottom: 1px solid $hyperfly-border-color;
+      transition: all 500ms ease;
+      counter-increment: count;
+
+      &__number {
+        padding: 0;
+        font-weight: 600;
+        letter-spacing: -3%;
+        font-size: 20px;
+        font-family: $hyperfly-heading-font;
+
+        &::before {
+          content: counters(count, ".");
+          position: relative;
+          display: inline-block;
+        }
+      }
+    }
+
+    .accrodion-title {
+      padding: 7px 0 12px;
+      padding-right: 30px;
+      cursor: pointer;
+      transition: all 500ms ease;
+      display: flex;
+      align-items: center;
+      color: $hyperfly-black;
+      position: relative;
+
+      h4 {
+        flex: 1;
+        padding-left: 4px;
+        margin: 0;
+        transition: all 500ms ease;
+        position: relative;
+        font-weight: 600;
+        color: inherit;
+        letter-spacing: -3%;
+        font-size: 20px;
+      }
+
+      &__icon {
+        position: absolute;
+        bottom: 11px;
+        right: 0;
+        font-size: 16px;
+        font-weight: normal;
+        transition: all 500ms ease;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        display: inline-block;
+
+        &::after {
+          content: "\e94c";
+          font-family: 'icomoon' !important;
+        }
+      }
+    }
+
+    .active .accrodion-title__icon {
+      transform: rotate(-45deg);
+    }
+
+    .accrodion-content {
+      .inner {
+        padding: 15px 0 35px;
+
+        img {
+          max-width: 100%;
+          display: inline-block;
+          border-radius: 7px;
+
+          @media (max-width: 767px) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      p {
+        margin: 0 0 25px;
+        line-height: 30px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-size: 16px;
+          font-weight: 500;
+          font-family: $hyperfly-heading-font;
+          margin-top: 5px;
+
+          i {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: inline-block;
+
+    @media (max-width: 1199px) {
+      margin-top: 40px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    &__info {
+      position: absolute;
+      text-align: left;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1;
+      background-color: $hyperfly-white;
+      width: 250px;
+      border-radius: 10px;
+      padding: 39px 35px;
+
+      &__icon {
+        font-size: 55px;
+        line-height: 55px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        display: inline-block;
+        margin: 0 0 10px;
+      }
+
+      &__number {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -2%;
+        margin: 0 0 42px;
+      }
+
+      &__text {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 500;
+        color: $hyperfly-text;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.faq-two {
+  padding: 120px 0;
+  position: relative;
+  background-color: $hyperfly-gray;
+  counter-reset: count;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  .sec-title {
+    padding-bottom: 31px;
+  }
+
+  .sec-title__text {
+    font-weight: 400;
+  }
+
+  &__accordion {
+    position: relative;
+
+    .accrodion {
+      position: relative;
+      margin-top: 10px;
+      border: 1px solid rgba($hyperfly-black-rgb, .07);
+      border-radius: 10px;
+      transition: all 500ms ease;
+      counter-increment: count;
+
+      &__number {
+        padding: 0;
+        font-weight: 600;
+        letter-spacing: -3%;
+        font-size: 20px;
+        font-family: $hyperfly-heading-font;
+
+        &::before {
+          content: counters(count, ".");
+          position: relative;
+          display: inline-block;
+        }
+      }
+    }
+
+    .accrodion-title {
+      padding: 16px 30px 15px;
+      padding-right: 70px;
+      cursor: pointer;
+      transition: all 500ms ease;
+      display: flex;
+      align-items: center;
+      color: $hyperfly-black;
+      position: relative;
+
+      h4 {
+        flex: 1;
+        padding-left: 4px;
+        margin: 0;
+        transition: all 500ms ease;
+        position: relative;
+        font-weight: 600;
+        color: inherit;
+        letter-spacing: -3%;
+        font-size: 20px;
+      }
+
+      &__icon {
+        position: absolute;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        right: 9px;
+        font-size: 16px;
+        font-weight: normal;
+        transition: all 500ms ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $hyperfly-black;
+        background-color: $hyperfly-white;
+        overflow: hidden;
+
+        &::after {
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 0;
+          top: 0;
+          margin: auto;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          z-index: -1;
+          background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+          transition: all 0.4s ease;
+          border-radius: 10px;
+        }
+
+        &::before {
+          content: "\e94c";
+          font-family: 'icomoon' !important;
+          transition: all 500ms ease;
+          z-index: 2;
+          position: relative;
+        }
+      }
+    }
+
+    .active {
+      background-color: $hyperfly-white;
+      border-color: $hyperfly-white;
+
+      .accrodion-title__icon {
+        color: $hyperfly-white;
+      }
+
+      .accrodion-title__icon::before {
+        transform: rotate(-45deg);
+      }
+
+      .accrodion-title__icon::after {
+        width: 100%;
+      }
+    }
+
+    .accrodion-content {
+      .inner {
+        padding: 0 70px 24px 30px;
+      }
+
+      p {
+        margin: 0;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: inline-block;
+
+    @media (max-width: 1199px) {
+      margin-bottom: 70px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    >img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      margin: auto;
+      animation: rotated 20s infinite linear;
+    }
+
+    &__shape {
+      position: relative;
+      display: inline-block;
+      top: 30px;
+    }
+  }
+}
+
+.faq-three {
+  padding: 120px 0;
+  position: relative;
+  text-align: center;
+  counter-reset: count;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__shape_one {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 240px;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top center;
+  }
+
+  &__shape {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center bottom;
+    text-align: center;
+  }
+
+  &__accordion {
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 30px;
+
+    .accrodion {
+      position: relative;
+      margin-bottom: 10px;
+      background-color: $hyperfly-white;
+      border: 1px solid rgba($hyperfly-black-rgb, .07);
+      border-radius: 10px;
+      transition: all 500ms ease;
+      counter-increment: count;
+
+      &__number {
+        padding: 0;
+        font-weight: 600;
+        letter-spacing: -3%;
+        font-size: 20px;
+        font-family: $hyperfly-heading-font;
+
+        &::before {
+          content: counters(count, ".");
+          position: relative;
+          display: inline-block;
+        }
+      }
+    }
+
+    .accrodion-title {
+      padding: 16px 30px 15px;
+      padding-right: 70px;
+      cursor: pointer;
+      transition: all 500ms ease;
+      display: flex;
+      align-items: center;
+      color: $hyperfly-black;
+      position: relative;
+
+      h4 {
+        flex: 1;
+        padding-left: 4px;
+        margin: 0;
+        transition: all 500ms ease;
+        position: relative;
+        font-weight: 600;
+        color: inherit;
+        letter-spacing: -3%;
+        font-size: 20px;
+      }
+
+      &__icon {
+        position: absolute;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        right: 9px;
+        font-size: 16px;
+        font-weight: normal;
+        transition: all 500ms ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $hyperfly-white;
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+
+        &::before {
+          content: "\e94c";
+          font-family: 'icomoon' !important;
+          transition: all 500ms ease;
+          z-index: 2;
+          position: relative;
+        }
+      }
+    }
+
+    .active {
+      box-shadow: 10px 4px 60px 0px rgba(193, 193, 193, 0.25);
+
+      .accrodion-title__icon::before {
+        transform: rotate(-45deg);
+      }
+    }
+
+    .accrodion-content {
+      .inner {
+        padding: 2px 70px 28px 30px;
+      }
+
+      p {
+        margin: 0;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-top: 100px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        max-width: 277px;
+        background-color: $hyperfly-white;
+        filter: drop-shadow(10px 4px 60px rgba(193, 193, 193, 0.25));
+        border-radius: 10px;
+        padding: 18px 20px 18px 80px;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 600;
+        text-align: left;
+        position: absolute;
+        left: 70px;
+        top: 40px;
+
+        @media (max-width: 991px) {
+          left: 20px;
+        }
+
+        @media (max-width: 767px) {
+          left: 0 !important;
+          position: relative;
+          right: 0 !important;
+          top: 0 !important;
+          margin: 20px auto 0;
+        }
+
+        &:nth-child(2) {
+          left: auto;
+          right: 70px;
+
+          @media (max-width: 991px) {
+            right: 20px;
+          }
+        }
+
+        &:nth-child(3) {
+          left: 0;
+          top: 258px;
+
+          @media (min-width: 1500px) {
+            left: -120px;
+          }
+        }
+
+        &:nth-child(4) {
+          left: auto;
+          right: 0;
+          top: 258px;
+
+          @media (min-width: 1500px) {
+            right: -120px;
+          }
+        }
+
+        i {
+          font-size: 30px;
+          line-height: 30px;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+          position: absolute;
+          left: 33px;
+          top: 25px;
+        }
+      }
+    }
+  }
+}
+
+.faq-four {
+  padding: 108px 0;
+  position: relative;
+  background-color: $hyperfly-gray;
+  counter-reset: count;
+
+  @media (max-width: 767px) {
+    padding: 108px 0 80px;
+  }
+
+  &__bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after{
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 66.4%;
+      height: 100%;
+      content: "";
+      background-color: $hyperfly-black2;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 26% 100%, 5.5% 86%);
+
+      @media (max-width: 991px) {
+        width: 100%;
+        clip-path: none;
+      }
+    }
+  }
+
+  &__logo{
+    position: absolute;
+    z-index: 1;
+    left: 70px;
+    top: 70px;
+    background: linear-gradient(90deg, var(--hyperfly-base, #E11617) 0%, var(--hyperfly-base2, #EB6253) 100%);
+    border-radius: 7px;
+    display: inline-block;
+    padding: 0 11px;
+
+    @media (max-width: 1599px) {
+      left: 30px;
+      top: 30px;
+    }
+  }
+
+  &__title{
+    color: $hyperfly-white;
+    font-size: 75px;
+    line-height: 85px;
+    letter-spacing: -3%;
+    font-weight: 600;
+    margin: 0;
+    z-index: 1;
+    position: absolute;
+    left: 65px;
+    bottom: 63px;
+
+    @media (max-width: 1599px) {
+      font-size: 55px;
+      line-height: 65px;
+      left: 25px;
+      bottom: 25px;
+    }
+    @media (max-width: 1199px) {
+      font-size: 45px;
+      line-height: 55px;
+    }
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 55px;
+      line-height: 65px;
+      left: 25px;
+      bottom: 25px;
+    }
+  }
+
+  .sec-title {
+    padding-bottom: 31px;
+
+    &__title{
+      color: $hyperfly-white;
+
+      span{
+        color: $hyperfly-base;
+      }
+    }
+  }
+
+  .sec-title__text {
+    font-weight: 400;
+    color: rgba($hyperfly-white-rgb, .65);
+  }
+
+  &__accordion {
+    position: relative;
+
+    .accrodion {
+      position: relative;
+      margin-top: 10px;
+      border: 1px solid rgba($hyperfly-white-rgb, .07);
+      border-radius: 10px;
+      transition: all 500ms ease;
+      counter-increment: count;
+
+      &__number {
+        padding: 0;
+        font-weight: 600;
+        letter-spacing: -3%;
+        font-size: 20px;
+        font-family: $hyperfly-heading-font;
+
+        &::before {
+          content: counters(count, ".");
+          position: relative;
+          display: inline-block;
+        }
+      }
+    }
+
+    .accrodion-title {
+      padding: 16px 30px 15px;
+      padding-right: 70px;
+      cursor: pointer;
+      transition: all 500ms ease;
+      display: flex;
+      align-items: center;
+      color: $hyperfly-white;
+      position: relative;
+
+      h4 {
+        flex: 1;
+        padding-left: 4px;
+        margin: 0;
+        transition: all 500ms ease;
+        position: relative;
+        font-weight: 600;
+        color: inherit;
+        letter-spacing: -3%;
+        font-size: 20px;
+      }
+
+      &__icon {
+        position: absolute;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        right: 9px;
+        font-size: 16px;
+        font-weight: normal;
+        transition: all 500ms ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $hyperfly-black;
+        background-color: $hyperfly-white;
+        overflow: hidden;
+
+        &::after {
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 0;
+          top: 0;
+          margin: auto;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          z-index: -1;
+          background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+          transition: all 0.4s ease;
+          border-radius: 10px;
+        }
+
+        &::before {
+          content: "\e94c";
+          font-family: 'icomoon' !important;
+          transition: all 500ms ease;
+          z-index: 2;
+          position: relative;
+        }
+      }
+    }
+
+    .active {
+
+      .accrodion-title__icon {
+        color: $hyperfly-white;
+      }
+
+      .accrodion-title__icon::before {
+        transform: rotate(-45deg);
+      }
+
+      .accrodion-title__icon::after {
+        width: 100%;
+      }
+    }
+
+    .accrodion-content {
+      .inner {
+        padding: 0 70px 24px 30px;
+      }
+
+      p {
+        margin: 0;
+        color: rgba($hyperfly-white-rgb, .65);
+        line-height: 30px;
+      }
+    }
+  }
+}

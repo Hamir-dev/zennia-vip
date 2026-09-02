@@ -1,0 +1,1218 @@
+/*-- Tab Section --*/
+.tab-one {
+  position: relative;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  .sec-title {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1199px) {
+      display: block;
+
+      * br {
+        display: none;
+      }
+    }
+
+    &__title {
+      margin: 0;
+    }
+
+    &__text {
+      max-width: 525px;
+      font-size: 18px;
+      line-height: 35px;
+      font-weight: 500;
+
+      @media (max-width: 1199px) {
+        max-width: 100%;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__tabs {
+    margin: 0 0 70px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 7px;
+    border: 1px solid rgba($hyperfly-black-rgb, .07);
+
+    @media (max-width: 1199px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 574px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      cursor: pointer;
+      justify-content: center;
+      border-right: 1px solid rgba($hyperfly-black-rgb, .07);
+      padding: 29px 10px 23px;
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 600;
+      color: $hyperfly-black;
+      font-family: $hyperfly-heading-font;
+      letter-spacing: -2%;
+      transition: all 0.4s ease;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: calc(100% - 8px);
+        width: 0;
+        top: 0;
+        margin: auto;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        transition: all 0.5s ease;
+        border-radius: 7px;
+      }
+
+      i {
+        display: inline-block;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to left, $hyperfly-base, $hyperfly-base2 50%, $hyperfly-white 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: all 0.4s ease;
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 5px;
+      }
+
+      &.active-btn,
+      &:hover {
+        color: $hyperfly-white;
+
+        &::after {
+          width: calc(100% - 8px);
+        }
+
+        i {
+          transition: all 0.4s cubic-bezier(0, 0, 0.23, 1);
+          background-position: 0%;
+        }
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    @media (min-width: 1400px) {
+      padding-right: 110px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 600;
+      letter-spacing: -3%;
+      margin: 0 0 25px;
+    }
+
+    &__text {
+      margin: 0 0 36px;
+    }
+
+    &__list {
+      margin: 0 0 45px;
+      padding: 0;
+      list-style: none;
+
+      li {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: $hyperfly-heading-font;
+        margin: 0 0 4px;
+
+        i {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+          font-size: 18px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .hyperfly-btn {
+      background: $hyperfly-black;
+
+      >span {
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @media (max-width: 1199px) {
+      max-width: 740px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+
+    &__item {
+      position: relative;
+
+      @media (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    img {
+      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    &__info {
+      position: absolute;
+      right: 145px;
+      bottom: 30px;
+      background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      border-radius: 7px;
+      width: 250px;
+      padding: 40px 35px 40px;
+
+      @media (max-width: 767px) {
+        position: relative;
+        bottom: 0;
+        right: 0;
+      }
+
+      &__icon {
+        color: $hyperfly-white;
+        font-size: 55px;
+        line-height: 55px;
+      }
+
+      &__number {
+        color: $hyperfly-white;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -2%;
+        margin: 10px 0 42px;
+      }
+
+      &__text {
+        color: $hyperfly-white;
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+  }
+
+.fade-up {
+  transform: translate3d(0, 100px, 0);
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+}
+
+.active-tab .fade-up {
+  opacity: 1;
+  transform: translateZ(0);
+  transition-duration: 1.2s;
+}
+}
+
+.tab-two {
+  position: relative;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__shape{
+    position: absolute;
+    bottom: 40px;
+    right: 18%;
+    width: 785px;
+    height: 328px;
+
+    @media (max-width: 1599px) {
+      right: 2%;
+    }
+    @media (max-width: 991px){
+      display: none;
+    }
+  }
+
+  .sec-title{
+    padding-bottom: 48px;
+    &__title {
+      margin: 0;
+      @media (max-width: 991px) {
+        br{
+          display: none;
+        }
+      }
+    }
+
+    &__text {
+      max-width: 520px;
+      font-size: 18px;
+      line-height: 35px;
+      font-weight: 500;
+      margin-left: auto;
+      margin-top: 37px;
+
+      @media (max-width: 991px) {
+        max-width: 100%;
+        margin: 0 0 40px;
+      }
+    }
+  }
+
+  &__tabs {
+    margin: 0 0 55px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 7px;
+    border: 1px solid rgba($hyperfly-black-rgb, .07);
+
+    @media (max-width: 1199px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 574px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      cursor: pointer;
+      justify-content: center;
+      border-right: 1px solid rgba($hyperfly-black-rgb, .07);
+      padding: 29px 10px 23px;
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 600;
+      color: $hyperfly-black;
+      font-family: $hyperfly-heading-font;
+      letter-spacing: -2%;
+      transition: all 0.4s ease;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: calc(100% - 8px);
+        width: 0;
+        top: 0;
+        margin: auto;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        transition: all 0.5s ease;
+        border-radius: 7px;
+      }
+
+      i {
+        display: inline-block;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to left, $hyperfly-base, $hyperfly-base2 50%, $hyperfly-white 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: all 0.4s ease;
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 5px;
+      }
+
+      &.active-btn,
+      &:hover {
+        color: $hyperfly-white;
+
+        &::after {
+          width: calc(100% - 8px);
+        }
+
+        i {
+          transition: all 0.4s cubic-bezier(0, 0, 0.23, 1);
+          background-position: 0%;
+        }
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    @media (min-width: 1400px) {
+      padding-right: 75px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 600;
+      letter-spacing: -3%;
+      margin: 0 0 20px;
+    }
+
+    &__text {
+      margin: 0 0 30px;
+      border-bottom: 1px solid $hyperfly-border-color;
+      padding-bottom: 40px;
+
+      @media (min-width: 1400px) {
+        margin-right: 55px;
+      }
+    }
+
+    &__box{
+      position: relative;
+
+      &__top{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, var(--hyperfly-base, #E11617) 0%, var(--hyperfly-base2, #EB6253) 100%);
+        font-size: 45px;
+        margin-bottom: 6px;
+      }
+
+      &__title{
+        font-size: 55px;
+        font-weight: 600;
+        letter-spacing: -5%;
+        margin: 0;
+      }
+
+      &__text{
+        font-size: 20px;
+        letter-spacing: -3%;
+        color: $hyperfly-text;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    &__list {
+      margin: 40px 0 45px;
+      padding: 0;
+      list-style: none;
+
+      li {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: $hyperfly-heading-font;
+        margin: 0 0 4px;
+
+        i {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+          font-size: 18px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &__btn{
+      position: relative;
+      display: flex;
+      gap: 10px;
+
+      @media (max-width: 500px){
+        flex-wrap: wrap;
+      }
+    }
+
+    .hyperfly-btn {
+      background: $hyperfly-black;
+
+      >span {
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      }
+    }
+    .tab-two__content__btn__two{
+      background-color: transparent;
+      color: $hyperfly-black;
+
+      &:hover{
+        color: $hyperfly-white;
+      }
+
+      >i{
+        padding: 10.5px 20px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 16px;
+
+    @media (max-width: 1199px) {
+      max-width: 740px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+
+    &__item {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+
+      @media (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+
+      &:nth-child(1)::after{
+        position: absolute;
+        left: 60px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: calc(100% - 20px);
+        width: 100%;
+        content: '';
+        border-radius: 400px;
+        border: 1px solid $hyperfly-base;
+        z-index: -1;
+      }
+
+      &:nth-child(2){
+        position: absolute;
+        left: -120px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1599px) {
+          left: -60px;
+        }
+
+        img{
+          border-radius: 0;
+          animation: shapeMove 4s linear 0s infinite;
+        }
+      }
+    }
+
+    img {
+      border-radius: 400px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    &__info {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      border-radius: 7px;
+      width: 250px;
+      max-height: 273px;
+      padding: 40px 35px 40px;
+
+      @media (max-width: 767px) {
+        position: relative;
+        bottom: 0;
+        right: 0;
+      }
+
+      &__icon {
+        color: $hyperfly-white;
+        font-size: 55px;
+        line-height: 55px;
+      }
+
+      &__number {
+        color: $hyperfly-white;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -2%;
+        margin: 10px 0 42px;
+      }
+
+      &__text {
+        color: $hyperfly-white;
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+  }
+
+.fade-up {
+  transform: translate3d(0, 100px, 0);
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+}
+
+.active-tab .fade-up {
+  opacity: 1;
+  transform: translateZ(0);
+  transition-duration: 1.2s;
+}
+}
+
+/*-- Services --*/
+.service-one {
+  position: relative;
+  padding: 120px 0 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0 0;
+  }
+
+  &--page{
+    padding: 120px 0;
+
+    @media (max-width: 767px) {
+      padding: 80px 0;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-left: 70px;
+
+    @media (max-width: 1599px) {
+      padding-left: 30px;
+    }
+
+    @media (max-width: 1199px) {
+      padding-left: 0;
+    }
+
+    @media (max-width: 991px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    border: 1px solid $hyperfly-border-color;
+    border-radius: 7px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 574px) {
+      display: block;
+    }
+
+    &__image {
+      position: relative;
+      height: 370px;
+      border-radius: 7px;
+      overflow: hidden;
+      width: 40.5%;
+      min-width: 250px;
+      max-width: 250px;
+
+      @media (max-width: 574px) {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      position: relative;
+      width: 59.5%;
+      padding: 20px 30px 20px 40px;
+
+      @media (max-width: 1599px) {
+        padding-left: 30px;
+      }
+
+      @media (max-width: 574px) {
+        width: 100%;
+        padding-top: 30px;
+      }
+    }
+
+    &__icon {
+      width: 55px;
+      height: 55px;
+      font-size: 55px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 0 0 25px;
+    }
+
+    &:hover &__icon {
+      animation-name: wobbleTop;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1
+    }
+
+    &__title {
+      font-size: 20px;
+      letter-spacing: -3%;
+      margin-bottom: 39px;
+      font-weight: 600;
+
+      a {
+        color: inherit;
+        @include borderHover;
+
+        &:hover {
+          color: $hyperfly-base;
+          text-shadow: 0 0 1px currentColor;
+        }
+      }
+    }
+
+    &__text {
+      margin: 0 0 20px;
+    }
+
+    &__rm {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border: 1px solid $hyperfly-border-color;
+      border-radius: 50%;
+      font-size: 14px;
+      color: $hyperfly-text;
+      transform: rotate(45deg);
+      overflow: hidden;
+
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 101%;
+        height: 0;
+        content: "";
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        border-radius: 50%;
+        transition: all 0.3s 0s ease-out;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: $hyperfly-white;
+        border-color: transparent;
+        transform: rotate(90deg);
+
+        &::after {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &--home-six{
+    position: relative;
+
+    .service-one__wrapper{
+      padding: 0 70px;
+
+      @media (max-width: 1399px) {
+        padding: 0 30px;
+      }
+
+      @media (max-width: 767px) {
+        padding: 0 15px;
+      }
+    }
+    .service-one__item__image{
+      border-radius: 30px;
+    }
+    .service-one__item{
+      border-radius: 30px;
+
+      &:hover .service-one__item__icon{
+        background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      }
+    }
+    .service-one__item__icon{
+      background-image: linear-gradient(90deg, $hyperfly-border-color 0%, $hyperfly-border-color 100%);
+    }
+  }
+}
+
+.service-two {
+  position: relative;
+  background-color: $hyperfly-gray;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 0 95px;
+
+    @media (max-width: 1799px) {
+      padding: 0 35px;
+    }
+
+    @media (max-width: 1199px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: $hyperfly-white;
+    border: 1px solid $hyperfly-border-color;
+    border-radius: 7px;
+    padding: 4px;
+
+    @media (max-width: 574px) {}
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 7px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__content {
+      position: relative;
+      padding: 20px 35px 19px;
+
+      @media (max-width: 1399px) {}
+
+      @media (max-width: 574px) {}
+    }
+
+    &__top {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      border-bottom: 1px solid $hyperfly-border-color;
+      margin: 0 0 20px;
+      padding: 0 0 20px;
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      font-size: 50px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    &:hover &__icon {
+      animation-name: wobbleTop;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1
+    }
+
+    &__title {
+      font-size: 20px;
+      letter-spacing: -3%;
+      margin: 0;
+      font-weight: 600;
+
+      a {
+        color: inherit;
+        @include borderHover;
+
+        &:hover {
+          color: $hyperfly-base;
+          text-shadow: 0 0 1px currentColor;
+        }
+      }
+    }
+
+    &__text {
+      margin: 0 0 13px;
+    }
+
+    &__rm {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
+      font-family: $hyperfly-heading-font;
+      text-transform: uppercase;
+      color: $hyperfly-text;
+
+      span {
+        background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+        transition: all 500ms ease;
+      }
+
+      &:hover {
+        color: $hyperfly-base;
+
+        span {
+          background-size: 100% 1px;
+        }
+      }
+
+      i {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}
+
+.service-three {
+  position: relative;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__item {
+    position: relative;
+    background-color: $hyperfly-white;
+    border: 1px solid $hyperfly-border-color;
+    border-radius: 7px;
+    filter: drop-shadow(10px 4px 60px rgba(193, 193, 193, 0.25));
+    padding: 4px;
+    transition: all 400ms ease;
+
+    &:hover {
+      filter: drop-shadow(10px 4px 60px rgba(193, 193, 193, 0.45));
+    }
+
+    @media (max-width: 574px) {}
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 7px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__content {
+      position: relative;
+      padding: 20px 35px 19px;
+
+      @media (max-width: 1399px) {
+        padding: 20px 25px 19px;
+      }
+
+      @media (max-width: 574px) {}
+    }
+
+    &__top {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      border-bottom: 1px solid $hyperfly-border-color;
+      margin: 0 0 20px;
+      padding: 0 0 20px;
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      font-size: 50px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    &:hover &__icon {
+      animation-name: wobbleTop;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1
+    }
+
+    &__title {
+      font-size: 20px;
+      letter-spacing: -3%;
+      margin: 0;
+      font-weight: 600;
+
+      a {
+        color: inherit;
+        @include borderHover;
+
+        &:hover {
+          color: $hyperfly-base;
+          text-shadow: 0 0 1px currentColor;
+        }
+      }
+    }
+
+    &__text {
+      margin: 0 0 13px;
+    }
+
+    &__rm {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
+      font-family: $hyperfly-heading-font;
+      text-transform: uppercase;
+      color: $hyperfly-text;
+
+      span {
+        background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+        transition: all 500ms ease;
+      }
+
+      &:hover {
+        color: $hyperfly-base;
+
+        span {
+          background-size: 100% 1px;
+        }
+      }
+
+      i {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}
+
+.service-four {
+  position: relative;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__item {
+    position: relative;
+    border: 1px solid $hyperfly-border-color;
+    border-radius: 7px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 574px) {
+      display: block;
+    }
+
+    &__image {
+      position: relative;
+      height: 370px;
+      border-radius: 7px;
+      overflow: hidden;
+      width: 39.6%;
+
+      @media (max-width: 574px) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      position: relative;
+      width: 60.4%;
+      padding: 20px 30px 20px 40px;
+
+      @media (max-width: 1599px) {
+        padding-left: 30px;
+      }
+
+      @media (max-width: 574px) {
+        width: 100%;
+        padding-top: 30px;
+      }
+    }
+
+    &__icon {
+      width: 55px;
+      height: 55px;
+      font-size: 55px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 0 0 25px;
+    }
+
+    &:hover &__icon {
+      animation-name: wobbleTop;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1
+    }
+
+    &__title {
+      font-size: 20px;
+      letter-spacing: -3%;
+      margin-bottom: 39px;
+      font-weight: 600;
+
+      a {
+        color: inherit;
+        @include borderHover;
+
+        &:hover {
+          color: $hyperfly-base;
+          text-shadow: 0 0 1px currentColor;
+        }
+      }
+    }
+
+    &__text {
+      margin: 0 0 20px;
+    }
+
+    &__rm {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border: 1px solid $hyperfly-border-color;
+      border-radius: 50%;
+      font-size: 14px;
+      color: $hyperfly-text;
+      transform: rotate(45deg);
+      overflow: hidden;
+
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 101%;
+        height: 0;
+        content: "";
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        border-radius: 50%;
+        transition: all 0.3s 0s ease-out;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: $hyperfly-white;
+        border-color: transparent;
+        transform: rotate(90deg);
+
+        &::after {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

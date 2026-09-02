@@ -1,0 +1,14 @@
+@mixin hyperflyBtn($bgColor: $hyperfly-base, $color: $hyperfly-white) {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  border: none;
+  outline: none !important;
+  background-color: $bgColor;
+  color: $color;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: 500ms;
+  padding: 10px 38px;
+}

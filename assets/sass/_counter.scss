@@ -1,0 +1,116 @@
+.counter-one {
+  position: relative;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid $hyperfly-border-color;
+    border-top: none;
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    border-right: 1px solid $hyperfly-border-color;
+    padding: 70px 40px 49px 65px;
+
+    @media (max-width: 1199px) {
+      padding: 70px 25px 49px 30px;
+    }
+
+    @media (max-width: 767px) {
+      border-bottom: 1px solid $hyperfly-border-color;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &__icon {
+      font-size: 55px;
+      line-height: 55px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      position: relative;
+      margin: 0 0 29px;
+    }
+
+    &__text {
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -2%;
+      margin: 0 0 9px;
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 500;
+      color: $hyperfly-text;
+      margin: 0;
+    }
+  }
+}
+
+.counter-two {
+  position: relative;
+  padding: 120px 0 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0 0;
+  }
+
+  &__item {
+    position: relative;
+    border-left: 1px solid $hyperfly-border-color;
+    padding: 50px 60px 51px 89px;
+
+    @media (max-width: 1399px) {
+      padding: 50px 40px 51px 68px;
+    }
+
+    @media (max-width: 1199px) {
+      padding: 50px 0 51px 30px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 20px 0 21px 30px;
+    }
+
+    &__icon {
+      font-size: 55px;
+      line-height: 55px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      position: relative;
+      margin: 0 0 29px;
+    }
+
+    &__number {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -2%;
+      margin: 0 0 8px;
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 500;
+      color: $hyperfly-text;
+      margin: 0 0 21px;
+    }
+
+    &__text {
+      margin: 0;
+    }
+  }
+}

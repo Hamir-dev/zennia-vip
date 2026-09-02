@@ -1,0 +1,135 @@
+body {
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+.owl-carousel {
+  direction: ltr;
+}
+
+.owl-carousel .owl-nav,
+.owl-carousel .owl-dots,
+.owl-carousel .owl-item {
+  direction: rtl;
+}
+
+.contact__input-box .bootstrap-select .dropdown-menu,
+.bootstrap-select .dropdown-toggle .filter-option {
+  text-align: right;
+}
+
+.list-unstyled {
+  padding-right: 0;
+}
+
+.main-menu .main-menu__list > li {
+  margin-left: 35px;
+}
+.main-menu .main-menu__list > li:last-child {
+  margin-left: 0;
+}
+
+.main-menu .main-menu__list li ul li > a::after {
+  left: 20px;
+  right: auto;
+}
+
+.main-header__inner {
+  padding-left: 0;
+  padding-right: 70px;
+}
+@media (max-width: 1499px) {
+  .main-header__inner {
+    padding-right: 20px;
+  }
+}
+
+.main-header__toggler {
+  margin-left: 0;
+  margin-right: 35px;
+}
+@media (max-width: 1199px) {
+  .main-header__toggler {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .main-header__toggler {
+    margin-right: 15px;
+  }
+}
+
+.checkbox {
+  justify-content: flex-end;
+}
+
+.feature-one__item__number {
+  left: 10px;
+  right: auto;
+  justify-content: flex-start;
+  border-radius: 0 0 70px 0;
+  padding: 8px 30px 0 0px;
+}
+
+.hyperfly-owl__carousel--basic-nav.owl-carousel .owl-dots .owl-dot::after {
+  left: 0;
+  right: -8px;
+}
+
+.hyperfly-btn > span i,
+.hyperfly-btn > i i {
+  transform: rotate(180deg);
+  margin-left: 0;
+  margin-right: 7px;
+}
+
+.why-choose-one__box {
+  padding: 28px 146px 22px 30px;
+}
+@media (max-width: 767px) {
+  .why-choose-one__box {
+    padding: 28px 30px 22px 30px;
+  }
+}
+
+.why-choose-one__box__icon {
+  left: auto;
+  right: 49px;
+}
+@media (max-width: 767px) {
+  .why-choose-one__box__icon {
+    right: 0;
+  }
+}
+
+.tab-one__content__list li i,
+.blog-card__meta li img,
+.blog-card__meta li i {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+.footer-widget__newsletter input {
+  text-align: left;
+}
+
+.footer-one__top__image {
+  right: auto;
+  left: 0;
+}
+@media (min-width: 1200px) {
+  .footer-one__top__image {
+    left: -90px;
+  }
+}
+
+.tab-one__image__info {
+  right: auto;
+  left: 145px;
+}
+@media (max-width: 767px) {
+  .tab-one__image__info {
+    left: 0;
+  }
+}
+/*# sourceMappingURL=hyperfly-custom-rtl.css.map */

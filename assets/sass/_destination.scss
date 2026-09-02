@@ -1,0 +1,1232 @@
+.destinations-one {
+  position: relative;
+  background-color: $hyperfly-black2;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__shape {
+    position: absolute;
+    left: 0;
+    top: 145px;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: .05;
+    animation: zoomsIn 2s infinite alternate;
+  }
+
+  .sec-title {
+    padding-bottom: 47px;
+
+    &__title {
+      margin: 0;
+    }
+  }
+
+  .container {
+    max-width: 1810px;
+  }
+
+  &__item {
+    position: relative;
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: all 500ms ease;
+      }
+    }
+
+    &:hover &__image img {
+      transform: rotate(1deg) scale(1.05);
+    }
+
+    &__content {
+      position: relative;
+      max-width: 89%;
+      padding: 26px 0 0;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: -2%;
+      margin-bottom: 5px;
+      font-weight: 700;
+      color: $hyperfly-white;
+
+      a {
+        color: inherit;
+        @include borderHover;
+      }
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: $hyperfly-white;
+      gap: 8px;
+      margin: 0;
+    }
+  }
+
+  &--home-seven{
+    position: relative;
+    background-color: transparent;
+
+    .sec-title__text{
+      margin: 20px 0 3px;
+    }
+  }
+}
+
+.destinations-two {
+  position: relative;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__shape {
+    position: absolute;
+    left: 0;
+    top: 145px;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: .05;
+    animation: shapeMove 3s linear 0s infinite;
+  }
+
+  .sec-title {
+    padding-bottom: 47px;
+
+    &__title {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: $hyperfly-white;
+    border: 1px solid $hyperfly-border-color;
+    border-radius: 10px;
+    text-align: center;
+    padding: 39px 25px;
+    transition: all 400ms ease;
+
+    &:hover {
+      box-shadow: 10px 4px 60px 0px rgba(193, 193, 193, 0.25);
+    }
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      margin: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 500ms ease;
+      }
+    }
+
+    &:hover &__image img {
+      transform: rotate(1deg) scale(1.05);
+    }
+
+    &__content {
+      position: relative;
+      padding: 32px 5px 0;
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      gap: 6px;
+      margin: 0 0 9px;
+
+      i {
+        font-size: 14px;
+      }
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: -3%;
+      margin-bottom: 17px;
+      font-weight: 600;
+
+      a {
+        color: inherit;
+        @include borderHover;
+      }
+    }
+
+    &__text {
+      margin: 0 0 25px;
+    }
+
+    &__rm {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      margin: auto;
+      border: 1px solid $hyperfly-border-color;
+      border-radius: 50%;
+      font-size: 14px;
+      color: $hyperfly-text;
+      transform: rotate(45deg);
+      overflow: hidden;
+
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 101%;
+        height: 0;
+        content: "";
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        border-radius: 50%;
+        transition: all 0.3s 0s ease-out;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: $hyperfly-white;
+        border-color: transparent;
+        transform: rotate(90deg);
+
+        &::after {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.destinations-three {
+  position: relative;
+  padding: 120px 0;
+  background-color: $hyperfly-black;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  .sec-title {
+    padding-bottom: 47px;
+
+    &__title {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    transition: all 400ms ease;
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: all 500ms ease;
+      }
+    }
+
+    &:hover &__image img {
+      transform: rotate(1deg) scale(1.05);
+    }
+
+    &__content {
+      position: relative;
+      z-index: 2;
+      margin: -110px 25px 0;
+      background-color: $hyperfly-white;
+      border-radius: 10px;
+      padding: 25px 40px 25px;
+      overflow: hidden;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        transition: all 0.4s ease;
+      }
+    }
+
+    &:hover &__content::after {
+      left: 0;
+      width: 100%;
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 14px;
+      gap: 5px;
+      margin: 0 0 13px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(to left, $hyperfly-base, $hyperfly-base2 50%, $hyperfly-white 50%);
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: all 0.3s ease;
+
+      i {
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    &:hover &__meta {
+      transition: all 0.4s cubic-bezier(0, 0, 0.23, 1);
+      background-position: 0%;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: -3%;
+      margin-bottom: 24px;
+      font-weight: 600;
+      transition: all 0.1s ease;
+
+      a {
+        color: inherit;
+        @include borderHover;
+      }
+    }
+
+    &:hover &__title {
+      color: $hyperfly-white;
+    }
+
+    &__text {
+      margin: 0 0 13px;
+      transition: all 0.3s ease;
+    }
+
+    &:hover &__text {
+      color: $hyperfly-white;
+    }
+
+    &__rm {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: $hyperfly-heading-font;
+      line-height: 1.4;
+      text-transform: uppercase;
+      color: $hyperfly-text;
+
+      span {
+        background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+        transition: all 500ms ease;
+      }
+
+      &:hover {
+        color: $hyperfly-white;
+
+        span {
+          background-size: 100% 1px;
+        }
+      }
+
+      i {
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    &:hover &__rm {
+      color: $hyperfly-white;
+    }
+  }
+}
+
+.destinations-four {
+  position: relative;
+  padding: 120px 0 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0 0;
+  }
+
+  .sec-title {
+    padding-bottom: 47px;
+
+    &__title {
+      margin: 0;
+    }
+  }
+
+  &__form{
+    position: relative;
+    z-index: 2;
+    background-color: $hyperfly-white;
+    filter: drop-shadow(10px 4px 60px rgba(193, 193, 193, 0.25));
+    border-radius: 10px;
+    padding: 40px 50px;
+    margin: 0 0 50px;
+
+    @media (max-width: 1199px){
+      padding: 40px 30px;
+    }
+
+    @media (max-width: 767px){
+      padding: 40px 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: all 500ms ease;
+      }
+
+      &::after {
+        background: linear-gradient(180deg, rgba(31, 31, 31, 0.00) 47.55%, #1F1F1F 100%);
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        content: "";
+        transition: 0.4s ease-out;
+      }
+
+      &::before {
+        background: linear-gradient(180deg, rgba(31, 31, 31, 0.00) 0%, #1F1F1F 100%);
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 0;
+        content: "";
+        transition: 0.4s ease-out;
+        z-index: 1;
+      }
+    }
+
+    &:hover &__image {
+      &::before {
+        height: 100%;
+      }
+
+      &::after {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      img {
+        transform: rotate(1deg) scale(1.05);
+      }
+    }
+
+    &__price {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      display: inline-block;
+      background-color: $hyperfly-white;
+      color: $hyperfly-black;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: $hyperfly-heading-font;
+      transition: 0.3s ease-out;
+      letter-spacing: -3%;
+      line-height: .8;
+      padding: 12px 16px;
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 1;
+
+      &::after {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 101%;
+        height: 0px;
+        content: "";
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        border-radius: 10px;
+        transition: 0.3s ease-out;
+        z-index: -1;
+      }
+    }
+
+    &:hover &__price {
+      color: $hyperfly-white;
+
+      &::after {
+        height: 100%;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+      left: 0;
+      bottom: 0;
+      padding: 0 35px 30px;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -3%;
+      margin-bottom: 0;
+      font-weight: 600;
+      color: $hyperfly-white;
+
+      a {
+        color: inherit;
+        @include borderHover;
+      }
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: $hyperfly-white;
+      gap: 8px;
+      margin: 0 0 8px;
+
+      i {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}
+
+.destinations-five {
+  position: relative;
+  border-bottom: 1px solid $hyperfly-border-color;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+  .gutter-y-60 {
+    --bs-gutter-y: 55px;
+  }
+
+  &__item {
+    position: relative;
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 7px;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: all 500ms ease;
+      }
+
+      &::after {
+        background: linear-gradient(90deg, rgba($hyperfly-white-rgb, 0.1) 0px, rgba($hyperfly-white-rgb, 0.1) 77%, rgba($hyperfly-white-rgb, 0.35) 92%, rgba($hyperfly-white-rgb, 0));
+        content: "";
+        height: 200%;
+        left: -210%;
+        opacity: 0;
+        position: absolute;
+        top: -50%;
+        transition: all 0.6s ease 0s;
+        width: 200%;
+      }
+    }
+
+    &:hover &__image {
+      &::after {
+        left: -30%;
+        opacity: 1;
+        top: -20%;
+        transition-duration: 0.6s, 0.6s, 0.15s;
+        transition-property: left, top, opacity;
+        transition-timing-function: linear;
+      }
+
+      img {
+        transform: rotate(1deg) scale(1.05);
+      }
+    }
+
+    &__content {
+      position: relative;
+      padding: 25px 0 0;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -3%;
+      margin-bottom: 0;
+      font-weight: 600;
+
+      a {
+        color: inherit;
+        @include borderHover;
+
+        &:hover{
+          color: $hyperfly-base;
+        }
+      }
+    }
+  }
+
+  &__btn{
+    position: relative;
+    text-align: center;
+    margin-top: 55px;
+  }
+}
+
+.destinations-six {
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: $hyperfly-black;
+  margin: 0 70px;
+  padding: 120px 0;
+
+  @media (max-width: 1500px) {
+    margin: 0 20px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+    margin: 0 10px;
+  }
+
+  &__shape_one{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  &__shape_two{
+    position: absolute;
+    right: 0;
+    left: -3%;
+    margin: 0 auto;
+    width: 720px;
+    height: 280px;
+    top: 65px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: shapeMove 3s linear 0s infinite;
+
+    @media (max-width: 1499px) {
+      display: none;
+    }
+  }
+
+  .sec-title__title{
+    background: linear-gradient(83.93deg, $hyperfly-black 0%, rgba($hyperfly-black-rgb, 0) 14.52%), linear-gradient(83.37deg, rgba($hyperfly-black-rgb, 0) 71.56%, $hyperfly-black 100%), $hyperfly-white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  &__wrapper{
+    position: relative;
+    padding-left: 60px;
+
+    @media (max-width: 1500px) {
+      padding-left: 30px;
+    }
+    @media (max-width: 599px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__top{
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin: 0 0 60px;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__text{
+      font-weight: 500;
+      margin: 0 55px 22px 0;
+      color: rgba($hyperfly-white-rgb, 0.65);
+      text-align: right;
+
+      @media (max-width: 1500px) {
+        margin-right: 30px;
+      }
+
+      @media (max-width: 991px) {
+        margin: 15px 0 0;
+        text-align: left;
+      }
+    }
+  }
+
+  .sec-title {
+    padding-bottom: 0;
+
+    &__title {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+
+    img {
+      width: 100%;
+      height: auto;
+      transition: all 500ms ease;
+    }
+
+    &:hover img {
+      transform: rotate(1deg) scale(1.05);
+    }
+
+    &__meta {
+      margin: 0;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      line-height: 24px;
+      background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+      color: $hyperfly-white;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: capitalize;
+      letter-spacing: 0.1px;
+      padding: 1px 12px 5px;
+    }
+
+    &__rm{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 13px;
+      width: 30px;
+      height: 30px;
+      background-color: $hyperfly-white;
+      color: $hyperfly-black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transform: rotate(-37deg);
+      z-index: 1;
+
+      &::after{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 101%;
+        height: 0px;
+        content: "";
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        border-radius: 10px;
+        transition: 0.3s ease-out;
+        z-index: -1;
+      }
+
+      &:hover{
+        transform: rotate(0deg);
+        color: $hyperfly-white;
+
+        &:hover::after{
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &__carousel{
+    position: relative;
+    padding-left: 180px;
+
+    @media (max-width: 1500px) {
+      padding-left: 150px;
+    }
+    
+    @media (max-width: 599px) {
+      padding-left: 0;
+    }
+  }
+
+  .hyperfly-owl__carousel__counter{
+    display: flex;
+    align-items: end;
+    gap: 0px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 1;
+    font-size: 70px;
+    font-family: $hyperfly-heading-font;
+    color: rgba($hyperfly-white-rgb, 0.15);
+    font-weight: 600;
+    line-height: 1;
+
+    @media (max-width: 599px) {
+      display: none;
+    }
+
+    &__total{
+      position: relative;
+
+      &::before{
+        content: "/";
+        position: relative;
+        display: inline-block;
+        line-height: 1;
+      }
+    }
+
+    &__current{
+      font-size: 85px;
+      color: rgba($hyperfly-white-rgb, 1);
+    }
+  }
+  .hyperfly-owl__carousel--basic-nav.owl-carousel .owl-nav{
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+    @media (max-width: 599px) {
+      position: relative;
+      margin: 30px auto 0;
+    }
+
+    button{
+      border: none;
+      background-color: $hyperfly-border-color;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      font-size: 16px;
+
+      &::after{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 101%;
+        height: 0px;
+        content: "";
+        background: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+        border-radius: 10px;
+        transition: 0.3s ease-out;
+        z-index: -1;
+      }
+
+      &:hover{
+        color: $hyperfly-white;
+
+        &:hover::after{
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.destinations-seven {
+  position: relative;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__shape {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 950px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: zump 4s linear 0s infinite;
+
+    @media (max-width: 1299px) {
+      display: none;
+    }
+  }
+
+  .sec-title {
+    padding-bottom: 50px;
+
+    &__title {
+      margin: 0;
+    }
+
+    &__text{
+      margin: 20px 0 0;
+    }
+  }
+
+  .container {
+    max-width: 1810px;
+  }
+
+  &__item {
+    position: relative;
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid $hyperfly-border-color;
+      padding: 10px;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: all 500ms ease;
+        overflow: hidden;
+      }
+    }
+
+    &__content {
+      position: relative;
+      padding: 21px 10px 0;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: -3%;
+      margin-bottom: 1px;
+      font-weight: 600;
+
+      a {
+        color: inherit;
+        @include borderHover;
+
+        &:hover{
+          color: $hyperfly-base;
+        }
+      }
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: $hyperfly-text;
+      gap: 8px;
+      margin: 0;
+    }
+  }
+}
+
+.destination-details {
+  position: relative;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+  &__image{
+    position: relative;
+
+    @media (min-width: 992px) {
+      height: 100%;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      border-radius: 7px;
+
+      @media (min-width: 992px) {
+        height: 100%;
+      }
+    }
+  }
+  &__list{
+    margin: 0;
+    padding: 0;
+    background-color: $hyperfly-gray;
+    border-radius: 7px;
+    padding: 50px;
+
+    @media (max-width: 1399px) {
+      padding: 40px 40px;
+    }
+    @media (max-width: 1199px) {
+      padding: 40px 28px;
+    }
+
+    li{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+      color: $hyperfly-black;
+      font-family: $hyperfly-heading-font;
+      font-weight: 600;
+      letter-spacing: 0;
+      padding-bottom: 22px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid rgba($hyperfly-black-rgb, .07);
+
+      @media (max-width: 1399px) {
+        padding-bottom: 20px;
+        margin-bottom: 19px;
+      }
+
+      &:last-child{
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+    &__text{
+      font-family: $hyperfly-font;
+      font-weight: 400;
+      font-size: 16px;
+      color: $hyperfly-text;
+    }
+  }
+  &__content{
+    position: relative;
+    margin-top: 40px;
+
+      &__list{
+        margin: 43px 0;
+        padding: 0;
+        list-style: none;
+
+          li{
+              color: $hyperfly-black;
+              font-size: 18px;
+              line-height: 30px;
+              font-weight: 600;
+              margin-top: 10px;
+
+              i {
+                display: inline-block;
+                margin-right: 12px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+              }
+          }
+      }
+  }
+  &__title{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -3%;
+    line-height: 50px;
+    margin: 0 0 20px;
+  }
+
+  &__pagination{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $hyperfly-border-color;
+    border-bottom: 1px solid $hyperfly-border-color;
+    padding: 40px 0;
+    margin-top: 55px;
+
+    a{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      color: $hyperfly-black;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 8%;
+      line-height: 1.2;
+
+      span{
+          background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+          transition: all 500ms ease;
+          display: inline-block;
+      }
+
+      i{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $hyperfly-gray;
+        border-radius: 50%;
+        font-size: 16px;
+        color: $hyperfly-black;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        transition: all 0.4s ease;
+
+        &::after{
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          margin: auto;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          top: 0;
+          z-index: -1;
+          background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+          transition: all 0.4s ease;
+          border-radius: 50%;
+          transform: scale(0);
+        }
+      }
+      &:hover{
+        span{
+          background-size: 100% 1px;
+        }
+        i{
+          color: $hyperfly-white;
+          &::after{
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-- Airport Gmaps Section --*/
+.airport-map {
+  position: relative;
+  padding: 120px 0;
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+  .gutter-y-60 {
+    --bs-gutter-y: 55px;
+  }
+
+  &__item {
+    position: relative;
+
+    &__maps {
+      position: relative;
+
+      iframe {
+        position: relative;
+        display: block;
+        border: none;
+        height: 300px;
+        width: 100%;
+      }
+      &__address{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 130px;
+        margin: auto;
+        max-width: 229px;
+        height: fit-content;
+        background-color: $hyperfly-white;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $hyperfly-black;
+        padding: 12px 20px;
+        z-index: 2;
+        filter: drop-shadow(10px 4px 60px rgba(193, 193, 193, 0.25));
+      }
+    }
+
+    &__title {
+      padding: 21px 0 0;
+      margin: 0;
+      font-size: 18px;
+      font-family: $hyperfly-font;
+      letter-spacing: 0%;
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+  }
+  &__btn{
+    position: relative;
+    text-align: center;
+    margin-top: 55px;
+  }
+}

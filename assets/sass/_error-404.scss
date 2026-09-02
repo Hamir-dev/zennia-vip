@@ -1,0 +1,42 @@
+/*-- Error Page --*/
+.error-404{
+  position: relative;
+  text-align: center;
+  padding: 120px 0;
+
+  @media (max-width: 767px){
+    padding: 80px 0;
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: 50px;
+
+    img{
+      max-width: 100%;
+      height: auto;
+      animation: flowerRotate 5s linear 0s infinite;
+    }
+  }
+
+  &__title{
+    font-size: 90px;
+    line-height: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, $hyperfly-base 0%, $hyperfly-base2 100%);
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  &__sub-title {
+    font-size: 30px;
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+
+  &__text{
+    margin: 0 0 34px;
+  }
+}

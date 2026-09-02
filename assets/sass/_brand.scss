@@ -1,0 +1,87 @@
+.client-carousel {
+  position: relative;
+  padding: 100px 0;
+
+  @media (max-width: 767px) {
+    padding: 60px 0;
+  }
+
+  &__one {
+    position: relative;
+
+    &__item {
+      position: relative;
+      text-align: center;
+      cursor: pointer;
+
+      img {
+        opacity: .3;
+        transition: all 500ms ease;
+        max-width: 100%;
+        width: auto !important;
+        margin: 0 auto;
+      }
+
+      &:hover img {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--two{
+    position: relative;
+
+    .sec-title__tagline{
+      color: $hyperfly-base;
+    }
+    .sec-title__text{
+      font-size: 18px;
+      line-height: 35px;
+      font-weight: 500;
+      margin: 18px 0 0;
+    }
+  }
+
+  &--three{
+    position: relative;
+
+    .sec-title__tagline{
+      color: $hyperfly-base;
+    }
+    .sec-title__text{
+      font-size: 18px;
+      line-height: 35px;
+      font-weight: 500;
+      margin: 18px 0 0;
+    }
+    &__shape-one{
+      position: absolute;
+      left: 2%;
+      top: 145px;
+      width: 308px;
+      height: 176px;
+      opacity: .07;
+      animation: shapeMove 4s linear 0s infinite;
+
+      @media (max-width: 1500px) {
+        left: 0;
+      }
+      @media (max-width: 1300px) {
+        display: none;
+      }
+    }
+    &__shape-two{
+      position: absolute;
+      right: 0;
+      top: 100px;
+      width: 337px;
+      height: 248px;
+      opacity: .07;
+      animation: zump 4s linear 0s infinite;
+
+      @media (max-width: 1300px) {
+        display: none;
+      }
+    }
+  }
+}
