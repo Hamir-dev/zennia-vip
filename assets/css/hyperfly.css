@@ -1153,10 +1153,13 @@ h6 {
 .sec-title__tagline.white {
   color: var(--hyperfly-white, #F5F0EA);
 }
+.sec-title__tagline--gold {
+  color: var(--hyperfly-base, #B9852D);
+  font-size: 26px;
+}
 .sec-title__tagline + .sec-title__title {
   margin-bottom: 0;
 }
-
 .ui-datepicker .ui-datepicker-header {
   background-image: none;
   background-color: var(--hyperfly-black, #08070C);
@@ -16457,6 +16460,24 @@ body.megamenu-popup-active .mobile-nav__content {
   max-width: 720px;
   margin: 0 auto 90px;
   text-align: center;
+}
+.tiers__brand-mark {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 32px;
+}
+@media (min-width: 768px) {
+  .tiers__brand-mark {
+    max-width: 460px;
+    margin: 0 auto 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .tiers__brand-mark {
+    max-width: 560px;
+  }
 }
 @media (max-width: 991px) {
   .tiers__head {
