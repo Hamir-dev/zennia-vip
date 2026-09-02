@@ -1,6 +1,8 @@
 (function ($) {
   "use strict";
 
+  var __preloaderStart = Date.now();
+
   /*-- Checkout Accoradin --*/
   if ($(".checkout-page__payment__title").length) {
     $(".checkout-page__payment__item")
@@ -843,7 +845,15 @@
   // window load event
   $(window).on("load", function () {
     if ($(".preloader").length) {
-      $(".preloader").fadeOut();
+      var $preloader = $(".preloader");
+      var elapsed = Date.now() - __preloaderStart;
+      var holdBeforeSplit = Math.max(0, 500 - elapsed);
+      setTimeout(function () {
+        $preloader.addClass("preloader--split");
+        setTimeout(function () {
+          $preloader.fadeOut(300);
+        }, 450);
+      }, holdBeforeSplit);
     }
     thmOwlInit();
     thmTinyInit();
