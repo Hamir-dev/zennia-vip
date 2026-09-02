@@ -4300,6 +4300,13 @@ h6 {
     max-width: 320px;
   }
 }
+.footer-one__top--photo-overlay .footer-one__top__title,
+.footer-one__top--photo-overlay .footer-one__top__text {
+  color: var(--hyperfly-white, #F5F0EA);
+}
+.footer-one__top--photo-overlay .footer-one__top__text {
+  color: rgba(var(--hyperfly-white-rgb, 245, 240, 234), 0.75);
+}
 .footer-one__top--light .footer-one__top__image img {
   width: 100%;
   height: 380px;
