@@ -24040,6 +24040,14 @@ body.boxed-wrapper .page-wrapper {
   border-color: var(--hyperfly-base, #B9852D);
   color: var(--hyperfly-base, #B9852D);
 }
+.genesis-btn-outline--dark {
+  border-color: rgba(8, 7, 12, 0.25);
+  color: var(--hyperfly-black, #08070C);
+}
+.genesis-btn-outline--dark:hover {
+  border-color: var(--hyperfly-base, #B9852D);
+  color: var(--hyperfly-base, #B9852D);
+}
 
 /* Alternating feature blocks */
 .genesis-feature {
