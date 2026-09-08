@@ -119,9 +119,13 @@
         </header><!-- /.main-header -->
 
         <section class="genesis-hero">
-            <div class="genesis-hero__bg" style="background-image: url(assets/uploads-backup/USA-Israel.jpeg);"></div>
+            <div class="genesis-hero__bg-video">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/uploads-backup/Packages-page-hero-vieos.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="container">
-                <div class="genesis-hero__row">
+                <div class="genesis-hero__row" style="max-width:760px;">
                     <div class="genesis-hero__content">
                         <span class="genesis-hero__eyebrow">Essentials</span>
                         <h1 class="genesis-hero__title">Exceptional Care Starts Here.</h1>
@@ -132,17 +136,8 @@
                                 <span>Experience Essentials<i aria-hidden="true" class="fas fa-angle-right"></i></span>
                             </a>
                             <a href="#membership-questions" class="genesis-btn-outline">How It Works</a>
-                            <a href="compare-membership.html" class="genesis-btn-outline">Compare Membership</a>
                         </div>
                     </div><!-- /.genesis-hero__content -->
-                    <div class="genesis-hero__media">
-                        <div class="media-placeholder" style="aspect-ratio:3/4;">
-                            <div class="media-placeholder__inner">
-                                <i aria-hidden="true" class="fas fa-images"></i>
-                                <span>Add image or video</span>
-                            </div>
-                        </div>
-                    </div><!-- /.genesis-hero__media -->
                 </div><!-- /.genesis-hero__row -->
             </div><!-- /.container -->
         </section><!-- /.genesis-hero -->
@@ -393,10 +388,13 @@
                         <p class="footer-one__top__text">
                             A more considered approach to your health, with the access to stay closer to it.
                         </p>
-                        <a href="#" class="hyperfly-btn">
-                            <i>Experience Essentials<i aria-hidden="true" class="fas fa-angle-right"></i></i>
-                            <span>Experience Essentials<i aria-hidden="true" class="fas fa-angle-right"></i></span>
-                        </a>
+                        <div class="footer-one__top__ctas" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                            <a href="#" class="hyperfly-btn">
+                                <i>Experience Essentials<i aria-hidden="true" class="fas fa-angle-right"></i></i>
+                                <span>Experience Essentials<i aria-hidden="true" class="fas fa-angle-right"></i></span>
+                            </a>
+                            <a href="compare-membership.html" class="genesis-btn-outline">Compare Membership</a>
+                        </div>
                     </div><!-- /.footer-one__top__content -->
                 </div>
             </div>
