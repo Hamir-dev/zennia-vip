@@ -24087,6 +24087,11 @@ body.boxed-wrapper .page-wrapper {
   min-width: 0;
   width: 100%;
 }
+.genesis-feature__media img {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+}
 .genesis-feature__icon {
   width: 60px;
   height: 60px;
